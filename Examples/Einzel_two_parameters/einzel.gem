@@ -1,0 +1,7 @@
+; Same three-cylinder layout as Einzel_minimal; only the middle inner radius varies.
+; The fractional surface resolves subcell r2 changes; it is not a ray surrogate.
+# local r2 = _G.einzel_r2 or 4
+pa_define(551,61,1,cylindrical,,electrostatic,,0.2,0.2,0.2,,surface=fractional)
+e(1) { fill { within { box(30,4,40,6) } } }
+e(2) { fill { within { box(45,$(r2),55,6) } } }
+e(3) { fill { within { box(60,4,70,6) } } }

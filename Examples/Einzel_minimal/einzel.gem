@@ -1,0 +1,6 @@
+; Three coaxial cylinders. X is the optical axis; Y is radius (mm).
+; 110 mm long, 12 mm radial domain; 0.2 mm cylindrical grid.
+pa_define(551,61,1,cylindrical,,electrostatic,,0.2,0.2,0.2)
+e(1) { fill { within { box(30,4,40,6) } } }
+e(2) { fill { within { box(45,4,55,6) } } }
+e(3) { fill { within { box(60,4,70,6) } } }
